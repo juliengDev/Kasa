@@ -1,3 +1,12 @@
-h1 {
-  color: red;
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1240px;
+  height: 68px;
+  margin: 40px 100px 63px;
+  &__logo {
+    width: 210px;
+    height: 68px;
+  }
 }

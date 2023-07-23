@@ -1,0 +1,21 @@
+.nav {
+    
+  ul {
+    list-style-type: none;
+    width: 309px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__link {
+    color: $main-color;
+    font-family: $montserrat;
+    font-size: $medium;
+    font-weight: $medium;
+    &--active {
+      padding-left: 20px;
+      text-decoration: underline;
+    }
+  }
+}
