@@ -2,7 +2,9 @@
 
 Les elements communs : 
  
-Header : Contient un logo et une nav bar
+Header : Contient un logo et une nav bar - DONE
+
+
 Banniere : Une image en background avec un titre en front
 Un tag : Contient le tag-name
 Une card : Contient le titre de la location   

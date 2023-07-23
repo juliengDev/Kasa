@@ -1,0 +1,12 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1240px;
+  height: 68px;
+  margin: 40px 0px 63px;
+  &__logo {
+    width: 210px;
+    height: 68px;
+  }
+}

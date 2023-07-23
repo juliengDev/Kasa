@@ -1,12 +1,24 @@
+
 .banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: absolute;
   width: 1240px;
-  height: 68px;
-  margin: 40px 100px 63px;
-  &__logo {
-    width: 210px;
-    height: 68px;
+  height: 223px;
+  top: 171px;
+  left: 100px;
+  border-radius: 10px;
+  background-position-y: 50%;
+  
+  // background-image: url("../../assets/home.jpg");
+  &__title {
+    position: relative;
+    left: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: $montserrat;
+    font-size: 48px;
+    font-weight: $medium;
+    line-height: 68.45px;
   }
 }

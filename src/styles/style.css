@@ -20,7 +20,7 @@ html {
  */
 body {
   width: 1440px;
-  margin: 0;
+  margin: 0 100px;
 }
 
 /**
@@ -338,11 +338,33 @@ template {
   align-items: center;
   width: 1240px;
   height: 68px;
-  margin: 40px 100px 63px;
+  margin: 40px 0px 63px;
 }
 .banner__logo {
   width: 210px;
   height: 68px;
+}
+
+.banner {
+  position: absolute;
+  width: 1240px;
+  height: 223px;
+  top: 171px;
+  left: 100px;
+  border-radius: 10px;
+  background-position-y: 50%;
+}
+.banner__title {
+  position: relative;
+  left: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 68.45px;
 }
 
 /*# sourceMappingURL=style.css.map */
