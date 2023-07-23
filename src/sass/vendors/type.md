@@ -1,0 +1,1 @@
+vendors est un repo pour des feuilles de style externes comme Boostrap ou Jquery ui. En gros il s'utilise pour tout css venant de l'exterieur.
