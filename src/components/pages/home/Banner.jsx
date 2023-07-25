@@ -3,6 +3,7 @@ import "../../../styles/style.css";
 import home from "../../../assets/home.jpg";
 
 const Banner = () => {
+  const promise = "Chez vous,partout et ailleurs";
   return (
     <div
       className="banner"
@@ -10,7 +11,7 @@ const Banner = () => {
         backgroundImage: `url(${home})`,
       }}
     >
-      <p className="banner__title">Chez vous,partout et ailleurs</p>
+      <p className="banner__title">{promise}</p>
     </div>
   );
 };

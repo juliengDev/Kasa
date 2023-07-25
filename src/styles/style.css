@@ -19,8 +19,9 @@ html {
  * Remove the margin in all browsers.
  */
 body {
+  display: flex;
+  justify-content: center;
   width: 1440px;
-  margin: 0 100px;
 }
 
 /**
@@ -334,15 +335,56 @@ template {
 
 .banner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 1240px;
   height: 68px;
   margin: 40px 0px 63px;
+  text-align: center;
 }
-.banner__logo {
+
+.header {
+  width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.header__logo {
   width: 210px;
   height: 68px;
+}
+
+.gallery {
+  position: absolute;
+  width: 1240px;
+  top: 455px;
+}
+.gallery__list {
+  background-color: #f6f6f6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 50px;
+  padding: 0;
+  justify-items: center;
+}
+.gallery__list__card {
+  position: relative;
+  margin: 56px 0px;
+  width: 340px;
+  height: 340px;
+  background-image: linear-gradient(#fff 0%, #000 50%);
+  color: #fff;
+  list-style-type: none;
+  border-radius: 10px;
+}
+.gallery__list__card__title {
+  position: absolute;
+  width: 200px;
+  height: 52px;
+  top: 268px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .banner {

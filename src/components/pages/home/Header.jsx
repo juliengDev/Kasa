@@ -5,7 +5,7 @@ import logo from "../../../assets/LOGO.png";
 const Logo = () => {
   return (
     <img
-      className="banner__logo"
+      className="header__logo"
       src={logo}
       alt="Logo KASA"
       aria-label="Logo du site Kasa"
@@ -35,7 +35,7 @@ const Nav = () => {
 
 const Header = () => {
   return (
-    <div>
+    <div className="header">
       <Logo />
       <Nav />
     </div>

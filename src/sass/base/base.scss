@@ -23,8 +23,9 @@ html {
  */
 
 body {
+  display: flex;
+  justify-content: center;
   width: 1440px;
-  margin: 0 100px;
 }
 
 /**
