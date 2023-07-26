@@ -1,6 +1,7 @@
 import React from "react";
-import "../../../styles/style.css";
-import logo from "../../../assets/LOGO.png";
+import "../../styles/style.css";
+import logo from "../../assets/LOGO.png";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
@@ -23,10 +24,10 @@ const Nav = () => {
     >
       <ul>
         <li className="nav__link nav__link--active" aria-labelledby="Accueil">
-          Accueil
+          <Link to="/">Accueil</Link>
         </li>
         <li className="nav__link" aria-labelledby="A Propos">
-          A Propos
+          <Link to="/Apropos">A Propos</Link>
         </li>
       </ul>
     </nav>
@@ -35,10 +36,10 @@ const Nav = () => {
 
 const Header = () => {
   return (
-    <div className="header">
+    <header className="header">
       <Logo />
       <Nav />
-    </div>
+    </header>
   );
 };
 

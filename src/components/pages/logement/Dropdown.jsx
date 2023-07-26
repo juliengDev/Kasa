@@ -1,24 +1,24 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-const DropdownMenu = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+// const DropdownMenu = ({ title, children }) => {
+//   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+//   const toggleMenu = () => {
+//     setIsOpen(!isOpen);
+//   };
 
-  return (
-    <div className="dropdown-menu">
-      <div className="dropdown-header" onClick={toggleMenu}>
-        <span>{title}</span>
-        <span className={`arrow-icon ${isOpen ? "rotated" : ""}`}>&#9660;</span>
-      </div>
-      {isOpen && <div className="dropdown-content">{children}</div>}
-    </div>
-  );
-};
+//   return (
+//     <div className="dropdown-menu">
+//       <div className="dropdown-header" onClick={toggleMenu}>
+//         <span>{title}</span>
+//         <span className={`arrow-icon ${isOpen ? "rotated" : ""}`}>&#9660;</span>
+//       </div>
+//       {isOpen && <div className="dropdown-content">{children}</div>}
+//     </div>
+//   );
+// };
 
-export default DropdownMenu;
+// export default DropdownMenu;
 
 // Autre logique :
 

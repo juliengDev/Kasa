@@ -1,6 +1,6 @@
 import React from "react";
-import "../../../styles/style.css";
-import home from "../../../assets/home.jpg";
+import "../../styles/style.css";
+import home from "../../assets/home.jpg";
 
 const Banner = () => {
   const promise = "Chez vous,partout et ailleurs";

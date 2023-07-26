@@ -1,7 +1,7 @@
 import React from "react";
-import "../../../styles/style.css";
-import datas from "../../../datas/logements.json";
-import cardsBackground from "../../../assets/cards-background.png";
+import "../../styles/style.css";
+import datas from "../../datas/logements.json";
+import cardsBackground from "../../assets/cards-background.png";
 
 const handleClick = (accommodationTitle) => {
   alert(`Doit ouvrir la page du logement ${accommodationTitle}`);
@@ -21,7 +21,7 @@ const Accommodation = ({ title }) => {
   );
 };
 
-const AccommodationList = () => {
+const Gallery = () => {
   return (
     <ul className="gallery-list">
       {datas.map(({ id, title }) => (
@@ -31,4 +31,4 @@ const AccommodationList = () => {
   );
 };
 
-export default AccommodationList;
+export default Gallery;

@@ -1,15 +1,13 @@
 import React from "react";
-import Header from "./Header";
-import Banner from "./Banner";
-import AccommodationList from "./AccommodationList";
+import Banner from "../../Banner";
+import Gallery from "../../Gallery";
 
 const Home = () => {
   return (
-    <React.StrictMode>
-      <Header />
+    <main>
       <Banner />
-      <AccommodationList />
-    </React.StrictMode>
+      <Gallery />
+    </main>
   );
 };
 
