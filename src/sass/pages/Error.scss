@@ -1,0 +1,44 @@
+.error {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__code {
+    position: absolute;
+    width: 597px;
+    height: 263px;
+    color: $main-color;
+    font-family: $montserrat;
+    font-size: 288px;
+    font-weight: $bold;
+    line-height: 411px;
+    letter-spacing: 0em;
+  }
+  &__txt {
+    position: absolute;
+    width: 872px;
+    height: 51px;
+    top: 606px;
+    font-family: $montserrat;
+    font-size: 36px;
+    font-weight: $medium;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $main-color;
+  }
+  &__link {
+    position: absolute;
+    width: 284px;
+    height: 26px;
+    top: 839px;
+    font-family: $montserrat;
+    font-weight: $medium;
+    font-size: $large;
+    color: $main-color;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

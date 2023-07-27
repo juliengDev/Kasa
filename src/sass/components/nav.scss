@@ -1,5 +1,4 @@
 .nav {
-    
   ul {
     list-style-type: none;
     width: 309px;
@@ -11,11 +10,12 @@
   &__link {
     color: $main-color;
     font-family: $montserrat;
-    font-size: $medium;
+    $mediumFont: medium;
+    font-size: 24px;
     font-weight: $medium;
-    &--active {
-      padding-left: 20px;
+    &:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 }

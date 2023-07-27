@@ -23,11 +23,19 @@ const Nav = () => {
       aria-roledescription="navigation"
     >
       <ul>
-        <li className="nav__link nav__link--active" aria-labelledby="Accueil">
-          <Link to="/">Accueil</Link>
+        <li>
+          <Link
+            className="nav__link"
+            aria-labelledby="Accueil"
+            to="/"
+          >
+            Accueil
+          </Link>
         </li>
-        <li className="nav__link" aria-labelledby="A Propos">
-          <Link to="/Apropos">A Propos</Link>
+        <li>
+          <Link className="nav__link" aria-labelledby="A Propos" to="/about">
+            A Propos
+          </Link>
         </li>
       </ul>
     </nav>
