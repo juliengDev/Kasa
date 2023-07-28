@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background-color: #000;
+  &__logo {
+    margin-top: 66px;
+    width: 122px;
+    height: 40px;
+    color: #fff;
+  }
+  &__copyright {
+    margin-top: 30px;
+    font-family: $montserrat;
+    font-size: $mediumFont;
+    font-weight: $medium;
+    color: #fff;
+  }
+}

@@ -11,6 +11,7 @@ const Banner = () => {
         backgroundImage: `url(${home})`,
       }}
     >
+      <div className="banner__overlay"></div>
       <p className="banner__title">{promise}</p>
     </div>
   );

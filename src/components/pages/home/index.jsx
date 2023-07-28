@@ -4,7 +4,7 @@ import Gallery from "../../Gallery";
 
 const Home = () => {
   return (
-    <main>
+    <main className="main">
       <Banner />
       <Gallery />
     </main>

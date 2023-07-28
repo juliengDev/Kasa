@@ -7,6 +7,16 @@ const handleClick = (accommodationTitle) => {
   alert(`Doit ouvrir la page du logement ${accommodationTitle}`);
 };
 
+const Gallery = () => {
+  return (
+    <ul className="gallery-list">
+      {datas.map(({ id, title }) => (
+        <Accommodation key={id} title={title} />
+      ))}
+    </ul>
+  );
+};
+
 const Accommodation = ({ title }) => {
   return (
     <li
@@ -18,16 +28,6 @@ const Accommodation = ({ title }) => {
     >
       <p className="gallery-list__card__title">{title}</p>
     </li>
-  );
-};
-
-const Gallery = () => {
-  return (
-    <ul className="gallery-list">
-      {datas.map(({ id, title }) => (
-        <Accommodation key={id} title={title} />
-      ))}
-    </ul>
   );
 };
 

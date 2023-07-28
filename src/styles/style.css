@@ -18,12 +18,6 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-body {
-  display: flex;
-  justify-content: center;
-  width: 1440px;
-}
-
 /**
  * Render the `main` element consistently in IE.
  */
@@ -31,10 +25,18 @@ main {
   display: block;
 }
 
+body {
+  width: 1440px;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -62,8 +64,16 @@ pre {
 /**
  * Remove the gray background on active links in IE 10.
  */
-a {
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
   background-color: transparent;
+  color: #ff6060;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /**
@@ -172,9 +182,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -182,9 +192,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -193,9 +203,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -239,8 +249,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -248,8 +258,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -257,7 +267,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -265,7 +275,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -310,6 +320,41 @@ template {
   display: none;
 }
 
+.footer {
+  width: 100%;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+}
+.footer__logo {
+  margin-top: 66px;
+  width: 122px;
+  height: 40px;
+  color: #fff;
+}
+.footer__copyright {
+  margin-top: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  font-weight: 500;
+  color: #fff;
+}
+
+.header {
+  width: 1240px;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 100px 0;
+}
+.header__logo {
+  color: #ff6060;
+  width: 210px;
+  height: 68px;
+}
+
 .nav ul {
   list-style-type: none;
   width: 309px;
@@ -329,41 +374,24 @@ template {
   cursor: pointer;
 }
 
-.banner {
-  display: flex;
-  align-items: center;
+.main {
+  margin: 63px 100px 0;
   width: 1240px;
-  height: 68px;
-  margin: 40px 0px 63px;
-  text-align: center;
-}
-
-.header {
-  width: 1240px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-}
-.header__logo {
-  width: 210px;
-  height: 68px;
 }
 
 .gallery-list {
-  position: absolute;
-  width: 1240px;
-  top: 455px;
+  margin-top: 43px;
+  padding: 56px 50px;
   background-color: #f6f6f6;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 60px;
   row-gap: 50px;
-  padding: 0;
   justify-items: center;
+  border-radius: 25px;
 }
 .gallery-list__card {
   position: relative;
-  margin: 56px 0px;
   width: 340px;
   height: 340px;
   background-image: linear-gradient(#fff 0%, #000 50%);
@@ -382,25 +410,28 @@ template {
 }
 
 .banner {
-  position: absolute;
-  width: 1240px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 223px;
-  top: 171px;
-  left: 100px;
   border-radius: 10px;
   background-position-y: 50%;
+  overflow: hidden;
+}
+.banner__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .banner__title {
-  position: relative;
-  left: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 68.45px;
+  z-index: 1;
 }
 
 .error {

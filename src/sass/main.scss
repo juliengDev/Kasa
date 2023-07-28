@@ -2,12 +2,10 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./base/base";
-@import "./components/components";
-@import "./components/nav";
 @import "./components/btn";
-@import "./layouts/Header";
-@import "./layouts/AccommodationList";
-@import "./layouts/Banner";
 @import "./layouts/Footer";
-@import "./layouts/Logement-card";
-@import "./pages/Error";
+@import "./layouts/Header";
+@import "./pages/home/Main.scss";
+@import "./pages/home/Gallery";
+@import "./pages/home/Banner";
+@import "./pages/404/Error";

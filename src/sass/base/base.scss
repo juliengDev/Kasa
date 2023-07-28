@@ -22,18 +22,16 @@ html {
  * Remove the margin in all browsers.
  */
 
-body {
-  display: flex;
-  justify-content: center;
-  width: 1440px;
-}
-
 /**
  * Render the `main` element consistently in IE.
  */
 
 main {
   display: block;
+}
+
+body {
+  width: 1440px;
 }
 
 /**
@@ -77,8 +75,16 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
-a {
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
   background-color: transparent;
+  color: $main-color;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /**

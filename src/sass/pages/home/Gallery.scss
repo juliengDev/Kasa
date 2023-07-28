@@ -1,17 +1,16 @@
 .gallery-list {
-  position: absolute;
-  width: 1240px;
-  top: 455px;
+  margin-top: 43px;
+  padding: 56px 50px;
   background-color: $light-grey;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 60px;
   row-gap: 50px;
-  padding: 0;
+
   justify-items: center;
+  border-radius: 25px;
   &__card {
     position: relative;
-    margin: 56px 0px;
     width: 340px;
     height: 340px;
     background-image: linear-gradient(#fff 0%, #000 50%);
