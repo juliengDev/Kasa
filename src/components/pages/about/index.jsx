@@ -1,10 +1,20 @@
 import React from "react";
 
+//Components
+import Banner from "../../Banner";
+import Dropdown from "../../Dropdown";
+
+//Assets
+import AboutBanner from "../../../assets/about.jpg";
+
 const About = () => {
+  const contentDropdown =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   return (
-    <React.StrictMode>
-      <h1>Bienvenue sur la page A propos</h1>
-    </React.StrictMode>
+    <main className="main">
+      <Banner backgroundImage={AboutBanner} content={contentDropdown} />
+      <Dropdown label="Label" />
+    </main>
   );
 };
 

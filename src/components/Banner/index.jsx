@@ -1,18 +1,16 @@
 import React from "react";
 import "../../styles/style.css";
-import home from "../../assets/home.jpg";
 
-const Banner = () => {
-  const promise = "Chez vous,partout et ailleurs";
+const Banner = ({ backgroundImage, title }) => {
   return (
     <div
       className="banner"
       style={{
-        backgroundImage: `url(${home})`,
+        backgroundImage: `url(${backgroundImage})`,
       }}
     >
       <div className="banner__overlay"></div>
-      <p className="banner__title">{promise}</p>
+      {title && <p className="banner__title">{title}</p>}
     </div>
   );
 };

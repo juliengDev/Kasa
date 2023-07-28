@@ -1,0 +1,26 @@
+.dropdown {
+  display: flex;
+  justify-content: center;
+  width: 1240px;
+  margin: 31px 0;
+
+  &__button {
+    width: 1023px;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $main-color;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    &__label {
+      margin-left: 18px;
+      font-family: $montserrat;
+      font-size: $x-large;
+    }
+    // &__ico {
+    //   background-image: url("../../assets/DropArrowDown.svg");
+    // }
+  }
+}
