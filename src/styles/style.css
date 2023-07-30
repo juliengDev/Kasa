@@ -321,7 +321,10 @@ template {
 }
 
 .dropdown {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 1240px;
   margin: 31px 0;
@@ -336,11 +339,47 @@ template {
   color: #fff;
   border: none;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 }
 .dropdown__button__label {
   margin-left: 18px;
   font-family: "Montserrat", sans-serif;
   font-size: x-large;
+}
+.dropdown__button__ico {
+  margin-right: 30px;
+  color: #fff;
+}
+.dropdown__content {
+  width: 983px;
+  padding: 40px 20px 20px;
+  margin-top: -5px;
+  color: #ff6060;
+  background-color: #f6f6f6;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: x-large;
+  border-radius: 0 0 10px 10px;
+}
+
+.menu {
+  margin-bottom: 33px;
+}
+
+.slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 1240px;
+  height: 415px;
+  color: #000;
+  background-color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+  border-radius: 25px;
 }
 
 .footer {

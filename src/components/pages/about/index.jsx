@@ -1,5 +1,6 @@
 import React from "react";
 
+
 //Components
 import Banner from "../../Banner";
 import Dropdown from "../../Dropdown";
@@ -8,12 +9,40 @@ import Dropdown from "../../Dropdown";
 import AboutBanner from "../../../assets/about.jpg";
 
 const About = () => {
-  const contentDropdown =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  
+
+  const dropdownContent = [
+    {
+      label: "Fiabilité",
+      text: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.",
+    },
+    {
+      label: "Respect",
+      text: "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
+    },
+    {
+      label: "Service",
+      text: "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
+    },
+    {
+      label: "Sécurité",
+      text: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
+    },
+  ];
+
   return (
     <main className="main">
-      <Banner backgroundImage={AboutBanner} content={contentDropdown} />
-      <Dropdown label="Label" />
+      <Banner backgroundImage={AboutBanner} />
+      <div className="dropdown">
+        {dropdownContent.map(({ label, text, index }) => (
+          <Dropdown
+            
+            key={`${label}-${index}`}
+            label={label}
+            content={text}
+          />
+        ))}
+      </div>
     </main>
   );
 };

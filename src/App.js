@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 //Pages
 import Home from "./components/pages/home";
 import About from "./components/pages/about";
+import Logement from "./components/pages/logement";
 
 const App = () => {
   const altLogo = "logo KASA";
@@ -24,7 +25,8 @@ const App = () => {
         <Routes>
           <Route path="*" element={<Error />} />
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />\
+          <Route path="/about" element={<About />} />
+          <Route path="/logements" element={<Logement />} />
         </Routes>
         <Footer logo={logo} alt={altLogo} copyright={copyrightTxt} />
       </Router>
