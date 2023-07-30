@@ -6,8 +6,8 @@ import Thumb from "../Thumb";
 const Gallery = () => {
   return (
     <ul className="gallery-list">
-      {datas.map(({ id, title }) => (
-        <Thumb key={id} title={title} />
+      {datas.map(({ id, title, cover }) => (
+        <Thumb key={id} cover={cover} title={title} />
       ))}
     </ul>
   );

@@ -1,21 +1,14 @@
 import React from "react";
-import cardsBackground from "../../assets/cards-background.png";
+import { Link } from "react-router-dom";
 
-const handleClick = (accommodationTitle) => {
-  alert(`Doit ouvrir la page du logement ${accommodationTitle}`);
-};
-
-const Thumb = ({ title }) => {
+const Thumb = ({ title, id, cover }) => {
   return (
-    <li
-      className="gallery-list__card"
-      onClick={() => handleClick(title)}
-      style={{
-        backgroundImage: `url(${cardsBackground})`,
-      }}
-    >
-      <p className="gallery-list__card__title">{title}</p>
-    </li>
+    <Link to={`/${id}`}>
+      <li className="gallery-list__card">
+        <img src={cover} alt={title} />
+        <p className="gallery-list__card__title">{title}</p>
+      </li>
+    </Link>
   );
 };
 
