@@ -1,20 +1,20 @@
 import React from "react";
-
+import "../../styles/style.css";
 
 //Components
-import Banner from "../../Banner";
-import Gallery from "../../Gallery";
+import Banner from "../../components/Banner";
+import Gallery from "../../components/Gallery";
 
 //Assets
-import homeBanner from "../../../assets/home.jpg";
+import homeBanner from "../../assets/img/home.jpg";
 
-const Home = () => {
+const Home = ({ datas }) => {
   const title = "Chez vous,partout et ailleurs";
 
   return (
     <main className="main">
       <Banner backgroundImage={homeBanner} title={title} />
-      <Gallery />
+      <Gallery datas={datas} />
     </main>
   );
 };

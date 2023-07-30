@@ -1,16 +1,14 @@
 import React from "react";
-
+import "../../styles/style.css";
 
 //Components
-import Banner from "../../Banner";
-import Dropdown from "../../Dropdown";
+import Banner from "../../components/Banner";
+import Dropdown from "../../components/Dropdown";
 
 //Assets
-import AboutBanner from "../../../assets/about.jpg";
+import AboutBanner from "../../assets/img/about.jpg";
 
 const About = () => {
-  
-
   const dropdownContent = [
     {
       label: "Fiabilité",
@@ -35,12 +33,7 @@ const About = () => {
       <Banner backgroundImage={AboutBanner} />
       <div className="dropdown">
         {dropdownContent.map(({ label, text, index }) => (
-          <Dropdown
-            
-            key={`${label}-${index}`}
-            label={label}
-            content={text}
-          />
+          <Dropdown key={`${label}-${index}`} label={label} content={text} />
         ))}
       </div>
     </main>

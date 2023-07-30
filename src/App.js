@@ -1,18 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Assets
-import logoFooter from "./assets/LOGO.png";
-import logoHeader from "./assets/LogoHeader.png";
+import logoFooter from "./assets/img/LOGO.png";
+import logoHeader from "./assets/img/LogoHeader.png";
 
 //Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 //Pages
-import Error from "./components/pages/error";
-import Home from "./components/pages/home";
-import About from "./components/pages/about";
-import Logement from "./components/pages/logement";
+import Error from "./pages/error";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Logement from "./pages/logement";
+
+//base de donnnees
+import datas from "../src/assets/datas/logements.json";
 
 const App = () => {
   const altLogo = "logo KASA";
@@ -23,9 +26,9 @@ const App = () => {
       <Router>
         <Header logo={logoHeader} alt={altLogo} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home datas={datas} />} />
           <Route path="/about" element={<About />} />
-          <Route path="/:id" element={<Logement />} />
+          <Route path="/:id" element={<Logement datas={datas} />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer logo={logoFooter} alt={altLogo} copyright={copyrightTxt} />
