@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 import "../../styles/style.css";
 
-const Dropdown = ({ label, content, buttonClass, contentClass }) => {
+const Dropdown = ({ label, content, buttonClass, contentClass, type }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(!open);
   };
-
+  console.log(content);
   return (
     <div className="menu">
       <button onClick={handleOpen} className={buttonClass}>
@@ -27,7 +27,17 @@ const Dropdown = ({ label, content, buttonClass, contentClass }) => {
           />
         </svg>
       </button>
-      {open && <p className={contentClass}>{content}</p>}
+      {/* {open && <p className={contentClass}>{content}</p>} */}
+
+      {open && type === "logement" ? (
+        <ul>
+          {content.map((equipement, index) => (
+            <li key={index}>{equipement}</li>
+          ))}
+        </ul>
+      ) : (
+        open && <p className={contentClass}>{content}</p>
+      )}
     </div>
   );
 };

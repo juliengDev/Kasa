@@ -67,10 +67,10 @@ const Logement = () => {
                 "dropdown__content dropdown-logement__content hidden"
               }
             />
-
             <Dropdown
+              type={"logement"}
               label={"Équipements"}
-              content={logement.equipements}
+              content={logement.equipments}
               buttonClass={"dropdown__button dropdown-logement__button"}
               contentClass={
                 "dropdown__content dropdown-logement__content hidden"
