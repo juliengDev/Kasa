@@ -1,0 +1,12 @@
+.dropdown-logement {
+  display: flex;
+  justify-content: space-between;
+  &__button {
+    position: relative;
+    width: 582px;
+    margin-top: 24px;
+  }
+  &__content {
+    width: 542px;
+  }
+}

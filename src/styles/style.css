@@ -579,7 +579,6 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 115px;
   height: 25px;
   padding: 3px 40px;
   background-color: #ff6060;
@@ -589,12 +588,40 @@ template {
 }
 .description__host {
   display: flex;
+  flex-direction: column;
 }
-.description__host__name {
+.description__host__profil {
   display: flex;
+}
+.description__host__profil__name {
+  display: flex;
+  width: 93px;
   flex-direction: column;
   color: #ff6060;
   font-family: "Montserrat", sans-serif;
+  font-size: large;
+}
+.description__host__profil__img {
+  height: 64px;
+  width: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.description__ratings {
+  margin-left: -20px;
+}
+
+.dropdown-logement {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown-logement__button {
+  position: relative;
+  width: 582px;
+  margin-top: 24px;
+}
+.dropdown-logement__content {
+  width: 542px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 // Components
 import Slideshow from "../../components/Slideshow";
 import DetailsLogememt from "../../components/DetailsLogememt";
+import Dropdown from "../../components/Dropdown";
 
 const Logement = () => {
   const [logement, setLogement] = useState(null);
@@ -34,7 +35,8 @@ const Logement = () => {
     }
 
     fetchLogement();
-  }, [id, naviguate, error]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (isLoading) {
     return null;
@@ -53,9 +55,28 @@ const Logement = () => {
             tags={logement.tags}
             hostName={logement.host.name}
             hostPicture={logement.host.picture}
-            rating={logement.rating}
+            ratings={logement.rating}
             equipments={logement.equipments}
           />
+          <div className="dropdown-logement">
+            <Dropdown
+              label={"Description"}
+              content={logement.description}
+              buttonClass={"dropdown__button dropdown-logement__button"}
+              contentClass={
+                "dropdown__content dropdown-logement__content hidden"
+              }
+            />
+
+            <Dropdown
+              label={"Équipements"}
+              content={logement.equipements}
+              buttonClass={"dropdown__button dropdown-logement__button"}
+              contentClass={
+                "dropdown__content dropdown-logement__content hidden"
+              }
+            />
+          </div>
         </div>
       )}
     </main>

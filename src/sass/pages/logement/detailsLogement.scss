@@ -26,7 +26,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 115px;
       height: 25px;
       padding: 3px 40px;
       background-color: $main-color;
@@ -37,13 +36,27 @@
   }
   &__host {
     display: flex;
-
-    &__name {
+    flex-direction: column;
+    &__profil {
       display: flex;
-      flex-direction: column;
-      color: $main-color;
-      font-family: $montserrat;
-      
+      &__name {
+        display: flex;
+        width: 93px;
+        flex-direction: column;
+        color: $main-color;
+        font-family: $montserrat;
+        font-size: $large;
+        // margin-right: 10px;
+      }
+      &__img {
+        height: 64px;
+        width: 64px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
     }
+  }
+  &__ratings {
+    margin-left: -20px;
   }
 }

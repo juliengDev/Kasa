@@ -1,15 +1,18 @@
 import React from "react";
 import Tags from "../Tags";
+import Rating from "../Rating";
+
 import "../../styles/style.css";
 
 const DetailsLogememt = ({
+  id,
   title,
   description,
   location,
   tags,
   hostName,
   hostPicture,
-  rating,
+  ratings,
   equipments,
 }) => {
   return (
@@ -23,11 +26,17 @@ const DetailsLogememt = ({
         </div>
       </div>
       <div className="description__host">
-        <div className="description__host__name">
-          <p>{hostName}</p>
+        <div className="description__host__profil">
+          <p className="description__host__profil__name">{hostName}</p>
+          <img
+            className="description__host__profil__img"
+            src={hostPicture}
+            alt="Profil de l'hebergeur"
+          />
         </div>
-        <img src={hostPicture} alt="Profil de l'hebergeur" />
-        {/* Mettre ici le composant Ratings */}
+        <div className="description__ratings">
+          {<Rating scaleValue={ratings} />}
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "../../styles/style.css";
 
-const Dropdown = ({ label, content }) => {
+const Dropdown = ({ label, content, buttonClass, contentClass }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -11,7 +11,7 @@ const Dropdown = ({ label, content }) => {
 
   return (
     <div className="menu">
-      <button onClick={handleOpen} className="dropdown__button">
+      <button onClick={handleOpen} className={buttonClass}>
         <p className="dropdown__button__label">{label}</p>
         <svg
           className="dropdown__button__ico"
@@ -27,7 +27,7 @@ const Dropdown = ({ label, content }) => {
           />
         </svg>
       </button>
-      {open && <p className="dropdown__content hidden">{content}</p>}
+      {open && <p className={contentClass}>{content}</p>}
     </div>
   );
 };
