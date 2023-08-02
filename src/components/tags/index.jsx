@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/style.css";
 
 const Tags = ({ tagTitle }) => {
-  return <div>{tagTitle}</div>;
+  return <p>{tagTitle}</p>;
 };
 
 export default Tags;

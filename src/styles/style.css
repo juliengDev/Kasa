@@ -22,7 +22,9 @@ html {
  * Render the `main` element consistently in IE.
  */
 main {
+  width: 1240px;
   display: block;
+  margin: 0 100px;
 }
 
 body {
@@ -373,6 +375,7 @@ template {
   text-transform: uppercase;
   width: 1240px;
   height: 415px;
+  margin-top: 20px;
   color: #000;
   background-color: aliceblue;
   font-family: "Montserrat", sans-serif;
@@ -386,6 +389,7 @@ template {
   height: 209px;
   display: flex;
   flex-direction: column;
+  margin-top: 14px;
   align-items: center;
   background-color: #000;
 }
@@ -433,11 +437,6 @@ template {
 .nav__link:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-
-.main {
-  margin: 63px 100px 0;
-  width: 1240px;
 }
 
 .gallery-list {
@@ -489,6 +488,7 @@ template {
   justify-content: center;
   align-items: center;
   height: 223px;
+  margin-top: 63px;
   border-radius: 10px;
   background-position-y: 50%;
   overflow: hidden;
@@ -548,6 +548,53 @@ template {
 .error__link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+  margin-top: 30px;
+}
+.description__title {
+  display: flex;
+  flex-direction: column;
+}
+.description__title h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #ff6060;
+}
+.description__title p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+}
+.description__tags {
+  display: flex;
+}
+.description__tags p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  height: 25px;
+  padding: 3px 40px;
+  background-color: #ff6060;
+  color: #fff;
+  border-radius: 10px;
+  margin: 20px 10px 0 0;
+}
+.description__host {
+  display: flex;
+}
+.description__host__name {
+  display: flex;
+  flex-direction: column;
+  color: #ff6060;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

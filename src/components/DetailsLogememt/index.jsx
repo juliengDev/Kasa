@@ -1,4 +1,5 @@
 import React from "react";
+import Tags from "../Tags";
 import "../../styles/style.css";
 
 const DetailsLogememt = ({
@@ -16,17 +17,17 @@ const DetailsLogememt = ({
       <div className="description__title">
         <h1>{title}</h1>
         <p>{location}</p>
-        {tags &&
-          tags.map(({ tag }) => <div className="description__tag">{tag}</div>)}
+        <div className="description__tags">
+          {tags &&
+            tags.map((tag, index) => <Tags key={index} tagTitle={tag} />)}
+        </div>
       </div>
       <div className="description__host">
-        <p className="description__host__name">{hostName}</p>
+        <div className="description__host__name">
+          <p>{hostName}</p>
+        </div>
         <img src={hostPicture} alt="Profil de l'hebergeur" />
         {/* Mettre ici le composant Ratings */}
-      </div>
-      <div>
-        {/* Mettre ici le composant Dropdown avec le titre Description */}
-        {/* Mettre ici le composant Dropdown avec le titre Equipements */}
       </div>
     </div>
   );

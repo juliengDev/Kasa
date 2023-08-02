@@ -7,8 +7,9 @@ import Gallery from "../../components/Gallery";
 
 //Assets
 import homeBanner from "../../assets/img/home.jpg";
+import datas from "../../assets/data/logements.json";
 
-const Home = ({ datas }) => {
+const Home = () => {
   const title = "Chez vous,partout et ailleurs";
 
   return (

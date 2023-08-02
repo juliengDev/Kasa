@@ -13,9 +13,7 @@ import Error from "./pages/error";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Logement from "./pages/logement";
-
-//base de donnnees
-import datas from "../src/assets/datas/logements.json";
+// import Logement2 from "./pages/logement/logement2";
 
 const App = () => {
   const altLogo = "logo KASA";
@@ -26,11 +24,12 @@ const App = () => {
       <Router>
         <Header logo={logoHeader} alt={altLogo} />
         <Routes>
-          <Route path="/" element={<Home datas={datas} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/:id" element={<Logement datas={datas} />} />
+          <Route path="/:id" element={<Logement />} />
           <Route path="*" element={<Error />} />
         </Routes>
+
         <Footer logo={logoFooter} alt={altLogo} copyright={copyrightTxt} />
       </Router>
     </React.StrictMode>

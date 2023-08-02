@@ -1,0 +1,49 @@
+.description {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+  margin-top: 30px;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    & h1 {
+      font-family: $montserrat;
+      font-size: 36px;
+      font-weight: $medium;
+      color: $main-color;
+    }
+    & p {
+      font-family: $montserrat;
+      font-size: 18px;
+      font-weight: $medium;
+      color: $main-color;
+    }
+  }
+  &__tags {
+    display: flex;
+
+    & p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 115px;
+      height: 25px;
+      padding: 3px 40px;
+      background-color: $main-color;
+      color: #fff;
+      border-radius: 10px;
+      margin: 20px 10px 0 0;
+    }
+  }
+  &__host {
+    display: flex;
+
+    &__name {
+      display: flex;
+      flex-direction: column;
+      color: $main-color;
+      font-family: $montserrat;
+      
+    }
+  }
+}
