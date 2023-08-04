@@ -22,22 +22,25 @@
 
     &__label {
       margin-left: 18px;
-      font-family: $montserrat;
       font-size: $x-large;
     }
-    &__ico {
+    & svg {
       margin-right: 30px;
       color: #fff;
+      transition: transform 400ms ease-in-out;
+
+      &.open {
+        transform: rotate(180deg);
+      }
     }
   }
 
   &__content {
     width: 983px;
     padding: 40px 20px 20px;
-    margin: -5px 0  ;
+    margin: -5px 0;
     color: $main-color;
     background-color: #f6f6f6;
-    font-family: $montserrat;
     font-weight: $regular;
     font-size: $x-large;
     border-radius: 0 0 10px 10px;

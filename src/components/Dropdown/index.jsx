@@ -14,7 +14,7 @@ const Dropdown = ({ label, content, buttonClass, contentClass, type }) => {
       <button onClick={handleOpen} className={buttonClass}>
         <p className="dropdown__button__label">{label}</p>
         <svg
-          className="dropdown__button__ico"
+          className={open ? "open" : ""}
           width="24"
           height="14"
           viewBox="0 0 24 14"

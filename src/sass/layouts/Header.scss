@@ -1,12 +1,11 @@
 .header {
-  width: 1240px;
-  height: 68px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 40px 100px 0;
   &__logo {
     color: $main-color;
-    width: 210px;
+    width: auto;
     height: 68px;
   }
 }
@@ -22,13 +21,22 @@
   }
   &__link {
     color: $main-color;
-    font-family: $montserrat;
+    
     $mediumFont: medium;
     font-size: 24px;
     font-weight: $medium;
     &:hover {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header {
+    &__logo {
+      height: 47px;
+      width: auto;
     }
   }
 }
