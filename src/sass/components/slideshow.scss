@@ -1,15 +1,52 @@
 .slideshow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  width: 1240px;
+  margin-top: 20px;
   height: 415px;
-  margin-top:20px;
-  color: #000;
-  background-color: aliceblue;
-  font-family: $montserrat;
-  font-size: xx-large;
-  font-weight: bold;
-  border-radius: 25px;
+  display: inline-block;
+  width: 100%;
+  height: 415px;
+  overflow: hidden;
+}
+.image-container {
+  & img {
+    overflow: hidden;
+  }
+}
+
+.slideshow-container {
+  height: inherit;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1240px;
+
+  & button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  &__button-left {
+    position: absolute;
+    left: 0;
+  }
+  &__count {
+    position: absolute;
+    width: 50px;
+    bottom: 30px;
+    left: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: white;
+    font-family: $montserrat;
+    font-size: $mediumFont;
+    font-weight: $medium;
+  }
+  &__button-right {
+    position: absolute;
+    right: 0;
+  }
 }

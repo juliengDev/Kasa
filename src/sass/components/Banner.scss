@@ -2,13 +2,12 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   height: 223px;
-  margin-top:63px;
+  margin-top: 63px;
   border-radius: 10px;
-  background-position-y: 50%;
   overflow: hidden;
-  // background-image: url("../../assets/home.jpg");
+
   &__overlay {
     position: absolute;
     width: 100%;
@@ -16,11 +15,12 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
   &__title {
+    position: absolute;
     color: white;
     font-family: $montserrat;
     font-size: 48px;
     font-weight: $medium;
     line-height: 68.45px;
-    z-index: 1;
+  
   }
 }

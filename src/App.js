@@ -13,7 +13,7 @@ import Error from "./pages/error";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Logement from "./pages/logement";
-// import Logement2 from "./pages/logement/logement2";
+
 
 const App = () => {
   const altLogo = "logo KASA";

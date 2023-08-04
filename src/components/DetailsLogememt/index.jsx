@@ -1,4 +1,3 @@
-import React from "react";
 import Tags from "../Tags";
 import Rating from "../Rating";
 
@@ -16,7 +15,7 @@ const DetailsLogememt = ({
   equipments,
 }) => {
   return (
-    <div className="description">
+    <>
       <div className="description__title">
         <h1>{title}</h1>
         <p>{location}</p>
@@ -38,7 +37,7 @@ const DetailsLogememt = ({
           {<Rating scaleValue={ratings} />}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

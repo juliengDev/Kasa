@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "../../styles/style.css";
 
 //Components
@@ -7,15 +7,34 @@ import Gallery from "../../components/Gallery";
 
 //Assets
 import homeBanner from "../../assets/img/home.jpg";
-import datas from "../../assets/data/logements.json";
 
 const Home = () => {
   const title = "Chez vous,partout et ailleurs";
+  const [logements, setLogements] = useState([]);
+
+  useEffect(() => {
+    fetch("logements.json")
+      .then((res) => res.json())
+      .then((res) => setLogements(res))
+      .catch((err) => console.log("Erreur : ", err));
+  }, []);
+
+  if (!logements) {
+    return null;
+  }
 
   return (
     <main className="main">
-      <Banner backgroundImage={homeBanner} title={title} />
-      <Gallery datas={datas} />
+      {logements && (
+        <>
+          <section className="banner">
+            <Banner backgroundImage={homeBanner} title={title} />
+          </section>
+          <section className="gallery">
+            <Gallery logements={logements} />
+          </section>
+        </>
+      )}
     </main>
   );
 };

@@ -1,9 +1,8 @@
-import React from "react";
 import "../../styles/style.css";
 
 import { Link } from "react-router-dom";
 
-const Header = ({logo,alt}) => {
+const Header = ({ logo, alt }) => {
   return (
     <header className="header">
       <img

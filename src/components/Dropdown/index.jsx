@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import "../../styles/style.css";
 
@@ -8,7 +8,7 @@ const Dropdown = ({ label, content, buttonClass, contentClass, type }) => {
   const handleOpen = () => {
     setOpen(!open);
   };
-  console.log(content);
+
   return (
     <div className="menu">
       <button onClick={handleOpen} className={buttonClass}>
@@ -30,9 +30,11 @@ const Dropdown = ({ label, content, buttonClass, contentClass, type }) => {
       {/* {open && <p className={contentClass}>{content}</p>} */}
 
       {open && type === "logement" ? (
-        <ul>
+        <ul className=" dropdown-logement__list">
           {content.map((equipement, index) => (
-            <li key={index}>{equipement}</li>
+            <li className="dropdown-logement__content" key={index}>
+              {equipement}
+            </li>
           ))}
         </ul>
       ) : (

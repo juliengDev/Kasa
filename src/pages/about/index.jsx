@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/style.css";
 
 //Components
@@ -12,8 +11,10 @@ import dropdownContent from "../../assets/data/about.json";
 const About = () => {
   return (
     <main className="main">
-      <Banner backgroundImage={AboutBanner} />
-      <div className="dropdown">
+      <section className="banner">
+        <Banner backgroundImage={AboutBanner} />
+      </section>
+      <section className="dropdown">
         {dropdownContent.map(({ label, text, index }) => (
           <Dropdown
             key={`${label}-${index}`}
@@ -23,7 +24,7 @@ const About = () => {
             contentClass={"dropdown__content hidden"}
           />
         ))}
-      </div>
+      </section>
     </main>
   );
 };

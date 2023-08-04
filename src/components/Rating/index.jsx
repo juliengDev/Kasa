@@ -1,11 +1,10 @@
-import React from "react";
 import "../../styles/style.css";
 
 const Rating = ({ scaleValue }) => {
   const range = [1, 2, 3, 4, 5];
 
   return (
-    <React.StrictMode>
+    <>
       {range.map((rangeElem, index) =>
         scaleValue >= rangeElem ? (
           <svg
@@ -37,7 +36,7 @@ const Rating = ({ scaleValue }) => {
           </svg>
         ),
       )}
-    </React.StrictMode>
+    </>
   );
 };
 
