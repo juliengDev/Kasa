@@ -6,7 +6,7 @@ const Gallery = ({ logements }) => {
     return null;
   }
   return (
-    <ul className="gallery-list">
+    <div className="gallery-grid">
       {logements.map((logement, index) => (
         <Thumb
           key={index}
@@ -15,7 +15,7 @@ const Gallery = ({ logements }) => {
           id={logement.id}
         />
       ))}
-    </ul>
+    </div>
   );
 };
 

@@ -2,28 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 100px 0;
+  margin: 40px 100px;
   &__logo {
     color: $main-color;
     width: auto;
-    height: 68px;
+    height: clamp(47px, 50%, 68px);
   }
 }
-
 .nav {
+  width: clamp(200px, 50%, 20rem);
   ul {
-    list-style-type: none;
-    width: 309px;
-    height: 34px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style-type: none;
+    min-height: 34px;
+    padding: 0;
   }
   &__link {
     color: $main-color;
-    
     $mediumFont: medium;
-    font-size: 24px;
+    font-size: 1.7rem;
     font-weight: $medium;
     &:hover {
       text-decoration: underline;
@@ -32,11 +31,30 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 650px) {
   .header {
     &__logo {
       height: 47px;
-      width: auto;
+    }
+    .nav {
+      max-width: 160px;
+      &__link {
+        font-size: $small;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 510px) {
+  .header {
+    margin: 40px 1.25rem;
+    &__logo {
+      height: 27px;
+    }
+    .nav {
+      max-width: 120px;
+      &__link {
+        font-size: $x-small;
+      }
     }
   }
 }

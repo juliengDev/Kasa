@@ -5,7 +5,7 @@ const Banner = ({ backgroundImage, title }) => {
     <>
       <img src={`${backgroundImage}`} alt="Banniere" />
       <div className="banner__overlay"></div>
-      {title && <p className="banner__title">{title}</p>}
+      {title && <div className="banner__title">{title}</div>}
     </>
   );
 };
