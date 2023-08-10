@@ -1,7 +1,7 @@
 .description {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-bottom: 16px;
   &__title {
     display: flex;
     flex-direction: column;
@@ -61,7 +61,39 @@
   .description {
     flex-direction: column;
     &__title {
-      width: 100% ;
+      margin-bottom: 24px;
+      & h1 {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+      }
+    }
+    & p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+    &__host {
+      width: 90%;
+      margin-left: 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      &__profil {
+        align-items: center;
+        order: 2;
+        & p {
+          padding-left: 20px;
+        }
+      }
+    }
+    &__ratings {
+      order: 1;
+      & svg {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 }

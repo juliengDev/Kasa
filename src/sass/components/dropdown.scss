@@ -39,7 +39,6 @@
   }
 
   &__content {
-    max-width: 64rem;
     padding: 40px 20px 20px;
     margin: -5px 0;
     color: $main-color;
@@ -57,20 +56,17 @@
 .dropdown-logement {
   display: flex;
   justify-content: space-between;
+  gap: 70px;
   &__button {
     position: relative;
-    min-width: 36.3rem;
-    margin-top: 24px;
   }
   &__list {
-    // width: 582px;
     margin: -5px 0;
     padding: 20px 0;
     border-radius: 0 0 10px 10px;
     background-color: #f6f6f6;
   }
   &__content {
-    max-width: 36.3rem;
     background-color: #f6f6f6;
     list-style-type: none;
     padding: 0.3rem 0.62rem;
@@ -88,6 +84,8 @@
     width: 95%;
     margin-bottom: 20px;
     & p {
+      border-radius: 0 0 10px 10px;
+      margin-top: -5px;
       font-size: 12px;
       padding: 17px 5px 15px;
     }
@@ -107,8 +105,15 @@
   .dropdown-logement {
     display: flex;
     flex-direction: column;
+    gap: 0px;
     &__button {
+      padding-top: 4px;
       min-width: 21rem;
+    }
+    &__content {
+      font-size: 12px;
+      font-weight: 400;
+      padding: 0 10px;
     }
   }
 }

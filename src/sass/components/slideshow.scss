@@ -1,10 +1,10 @@
 .slideshow {
-  margin-top: 20px;
   max-height: 26rem;
   display: inline-block;
   width: 100%;
   min-height: 415px;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 .image-container {
   & img {
@@ -22,7 +22,8 @@
   & button {
     position: absolute;
     border: none;
-    padding: 1rem 2rem;
+    width: 96;
+    height: 121;
     margin: 0;
     text-decoration: none;
     background: transparent;
@@ -34,7 +35,6 @@
   }
   &__count {
     position: absolute;
-    width: 3.125rem;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -48,12 +48,19 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 750px) {
   .slideshow {
     margin-top: 0;
-    min-height: 15.6rem;
+    min-width: 335px;
+    min-height: 225px;
     &-container {
       margin-top: 0;
+      & button svg {
+        width: 24px;
+      }
+      &__count {
+        font-size: $x-small;
+      }
     }
   }
 }

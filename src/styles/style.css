@@ -195,7 +195,6 @@ select {
   transform: rotate(180deg);
 }
 .dropdown__content {
-  max-width: 64rem;
   padding: 40px 20px 20px;
   margin: -5px 0;
   color: #ff6060;
@@ -212,11 +211,10 @@ select {
 .dropdown-logement {
   display: flex;
   justify-content: space-between;
+  gap: 70px;
 }
 .dropdown-logement__button {
   position: relative;
-  min-width: 36.3rem;
-  margin-top: 24px;
 }
 .dropdown-logement__list {
   margin: -5px 0;
@@ -225,7 +223,6 @@ select {
   background-color: #f6f6f6;
 }
 .dropdown-logement__content {
-  max-width: 36.3rem;
   background-color: #f6f6f6;
   list-style-type: none;
   padding: 0.3rem 0.62rem;
@@ -243,6 +240,8 @@ select {
     margin-bottom: 20px;
   }
   .menu p {
+    border-radius: 0 0 10px 10px;
+    margin-top: -5px;
     font-size: 12px;
     padding: 17px 5px 15px;
   }
@@ -259,15 +258,22 @@ select {
   .dropdown-logement {
     display: flex;
     flex-direction: column;
+    gap: 0px;
   }
   .dropdown-logement__button {
+    padding-top: 4px;
     min-width: 21rem;
+  }
+  .dropdown-logement__content {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 10px;
   }
 }
 .description {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-bottom: 16px;
 }
 .description__title {
   display: flex;
@@ -326,7 +332,39 @@ select {
     flex-direction: column;
   }
   .description__title {
+    margin-bottom: 24px;
+  }
+  .description__title h1 {
     width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+  }
+  .description p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .description__host {
+    width: 90%;
+    margin-left: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .description__host__profil {
+    align-items: center;
+    order: 2;
+  }
+  .description__host__profil p {
+    padding-left: 20px;
+  }
+  .description__ratings {
+    order: 1;
+  }
+  .description__ratings svg {
+    width: 18px;
+    height: 18px;
   }
 }
 .gallery {
@@ -395,12 +433,12 @@ select {
   }
 }
 .slideshow {
-  margin-top: 20px;
   max-height: 26rem;
   display: inline-block;
   width: 100%;
   min-height: 415px;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .image-container img {
@@ -417,7 +455,8 @@ select {
 .slideshow-container button {
   position: absolute;
   border: none;
-  padding: 1rem 2rem;
+  width: 96;
+  height: 121;
   margin: 0;
   text-decoration: none;
   background: transparent;
@@ -429,7 +468,6 @@ select {
 }
 .slideshow-container__count {
   position: absolute;
-  width: 3.125rem;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
@@ -442,13 +480,20 @@ select {
   right: 0;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 750px) {
   .slideshow {
     margin-top: 0;
-    min-height: 15.6rem;
+    min-width: 335px;
+    min-height: 225px;
   }
   .slideshow-container {
     margin-top: 0;
+  }
+  .slideshow-container button svg {
+    width: 24px;
+  }
+  .slideshow-container__count {
+    font-size: 0.75rem;
   }
 }
 .footer {
