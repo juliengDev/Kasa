@@ -1,3 +1,7 @@
+.menu {
+  width: 85%;
+}
+
 .dropdown {
   position: relative;
   display: flex;
@@ -7,8 +11,8 @@
   margin: 31px 0;
 
   &__button {
-    min-width: 64rem;
-    min-height: 47px;
+    width: 100%;
+    min-height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,6 +84,26 @@
 }
 
 @media only screen and (max-width: 841px) {
+  .menu {
+    width: 95%;
+    margin-bottom: 20px;
+    & p {
+      font-size: 12px;
+      padding: 17px 5px 15px;
+    }
+  }
+  .dropdown {
+    &__button {
+      height: 30px;
+      &__label {
+        font-size: 13px;
+      }
+      & svg {
+        width: 18.5px;
+        height: 18.5px;
+      }
+    }
+  }
   .dropdown-logement {
     display: flex;
     flex-direction: column;

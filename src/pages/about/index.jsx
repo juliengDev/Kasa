@@ -11,7 +11,7 @@ import dropdownContent from "../../assets/data/about.json";
 const About = () => {
   return (
     <main className="main">
-      <section className="banner">
+      <section className="banner banner-about">
         <Banner backgroundImage={AboutBanner} />
       </section>
       <section className="dropdown">

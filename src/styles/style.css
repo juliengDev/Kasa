@@ -67,12 +67,6 @@ u {
 }
 
 /* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -131,6 +125,16 @@ select {
   z-index: 2;
 }
 
+.banner-about {
+  position: relative;
+  min-height: 223px;
+}
+.banner-about img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+}
+
 @media only screen and (max-width: 908px) {
   .banner {
     min-width: 335px;
@@ -153,6 +157,10 @@ select {
     padding: 1rem;
   }
 }
+.menu {
+  width: 85%;
+}
+
 .dropdown {
   position: relative;
   display: flex;
@@ -162,8 +170,8 @@ select {
   margin: 31px 0;
 }
 .dropdown__button {
-  min-width: 64rem;
-  min-height: 47px;
+  width: 100%;
+  min-height: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -230,6 +238,24 @@ select {
 }
 
 @media only screen and (max-width: 841px) {
+  .menu {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  .menu p {
+    font-size: 12px;
+    padding: 17px 5px 15px;
+  }
+  .dropdown__button {
+    height: 30px;
+  }
+  .dropdown__button__label {
+    font-size: 13px;
+  }
+  .dropdown__button svg {
+    width: 18.5px;
+    height: 18.5px;
+  }
   .dropdown-logement {
     display: flex;
     flex-direction: column;

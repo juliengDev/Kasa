@@ -27,6 +27,16 @@
   }
 }
 
+.banner-about {
+  position: relative;
+  min-height: 223px;
+  & img {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
 @media only screen and (max-width: 908px) {
   .banner {
     min-width: 335px;
