@@ -68,7 +68,7 @@ const Logement = () => {
               content={logement.description}
               buttonClass={"dropdown__button dropdown-logement__button"}
               contentClass={
-                "dropdown__content dropdown-logement__content__description dropdown-logement__content hidden"
+                "dropdown-logement__content__description dropdown-logement__content hidden"
               }
             />
             <Dropdown
@@ -76,9 +76,7 @@ const Logement = () => {
               label={"Équipements"}
               content={logement.equipments}
               buttonClass={"dropdown__button dropdown-logement__button"}
-              contentClass={
-                "dropdown__content dropdown-logement__content hidden"
-              }
+              contentClass={"dropdown-logement__content hidden"}
             />
           </section>
         </>

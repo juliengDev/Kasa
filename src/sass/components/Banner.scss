@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 22px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,8 +27,21 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 908px) {
   .banner {
+    min-width: 335px;
+    max-height: 111px;
+  }
+  .banner__title {
+    font-size: 1.5rem;
+    font-weight: $regular;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .banner {
+    margin: 0 5px 40px;
     max-height: 111px;
   }
   .banner__title {

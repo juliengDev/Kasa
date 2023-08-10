@@ -4,12 +4,20 @@ html {
   font-size: 16px;
   font-family: $montserrat;
 }
-
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+.main {
+  margin: 0 100px 14px;
+}
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -68,10 +76,6 @@ select {
   font: inherit;
 }
 
-.main {
-  margin: 40px 6.25rem;
-}
-
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -88,9 +92,11 @@ select {
   }
 }
 
-@media only screen and (max-width: 638px) {
+@media only screen and (max-width: 630px) {
   .main {
-    min-width: 100%;
-    margin: 40px 1.25rem;
+    margin: 0 5px;
+  }
+  #root {
+    margin: 0 5px;
   }
 }

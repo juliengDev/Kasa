@@ -1,7 +1,6 @@
 .description {
   display: flex;
   justify-content: space-between;
-  width: 1240px;
   margin-top: 30px;
   &__title {
     display: flex;
@@ -55,5 +54,14 @@
   }
   &__ratings {
     margin-left: -20px;
+  }
+}
+
+@media only screen and (max-width: 752px) {
+  .description {
+    flex-direction: column;
+    &__title {
+      width: 100% ;
+    }
   }
 }

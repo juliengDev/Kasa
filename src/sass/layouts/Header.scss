@@ -1,23 +1,23 @@
 .header {
+  margin: 40px 100px;
+  min-width: 375px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 100px;
+  gap: 50px;
+
   &__logo {
     color: $main-color;
-    width: auto;
-    height: clamp(47px, 50%, 68px);
   }
 }
 .nav {
-  width: clamp(200px, 50%, 20rem);
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 57px;
     list-style-type: none;
-    min-height: 34px;
-    padding: 0;
+    min-width: 140px;
   }
   &__link {
     color: $main-color;
@@ -31,30 +31,32 @@
   }
 }
 
-@media only screen and (max-width: 650px) {
-  .header {
-    &__logo {
-      height: 47px;
+@media only screen and (max-width: 780px) {
+  .header__logo {
+    width: 145px;
+    height: auto;
+  }
+  .nav {
+    & ul {
+      gap: 10px;
     }
-    .nav {
-      max-width: 160px;
-      &__link {
-        font-size: $small;
-      }
+    & ul li a {
+      font-size: 16px;
     }
   }
 }
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 600px) {
   .header {
-    margin: 40px 1.25rem;
+    margin: 40px 5px;
+    min-width: 335px;
     &__logo {
-      height: 27px;
+      width: 145px;
+      height: auto;
     }
-    .nav {
-      max-width: 120px;
-      &__link {
-        font-size: $x-small;
-      }
+  }
+  .nav {
+    & ul li a {
+      font-size: 12px;
     }
   }
 }
