@@ -4,36 +4,44 @@
   align-items: center;
 
   &__code {
-    width: 597px;
-    height: 313px;
-    margin: 170px 0 0;
+    text-align: center;
     color: $main-color;
-    font-size: 288px;
+    font-size: 18rem;
     font-weight: $bold;
-    line-height: 411px;
-    letter-spacing: 0em;
   }
   &__txt {
-    width: 872px;
-    height: 51px;
-    margin-top: 66px;
+    width: 65%;
+    margin-bottom: 133px;
+    text-align: center;
     font-size: 36px;
     font-weight: $medium;
     line-height: 51px;
     letter-spacing: 0em;
-    text-align: left;
     color: $main-color;
   }
   &__link {
-    width: 284px;
-    height: 26px;
-    margin: 182px 0 50px;
+    margin: 0px 50px 50px;
+    text-align: center;
     font-weight: $medium;
     font-size: $large;
     color: $main-color;
     &:hover {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .error {
+    &__code {
+      font-size: 9.3rem;
+    }
+    &__txt {
+      font-size: 1.12rem;
+    }
+    &__link {
+      font-size: 0.875rem;
     }
   }
 }

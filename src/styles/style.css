@@ -24,20 +24,6 @@ html {
   padding: 0;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role=list],
 ol[role=list] {
@@ -87,14 +73,6 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-@media only screen and (max-width: 630px) {
-  .main {
-    margin: 0 5px;
-  }
-  #root {
-    margin: 0 5px;
   }
 }
 .banner {
@@ -525,6 +503,7 @@ select {
 }
 .header {
   margin: 40px 100px;
+  padding: 0 5px;
   min-width: 375px;
   display: flex;
   justify-content: space-between;
@@ -584,30 +563,24 @@ select {
   align-items: center;
 }
 .error__code {
-  width: 597px;
-  height: 313px;
-  margin: 170px 0 0;
+  text-align: center;
   color: #ff6060;
-  font-size: 288px;
+  font-size: 18rem;
   font-weight: 700;
-  line-height: 411px;
-  letter-spacing: 0em;
 }
 .error__txt {
-  width: 872px;
-  height: 51px;
-  margin-top: 66px;
+  width: 65%;
+  margin-bottom: 133px;
+  text-align: center;
   font-size: 36px;
   font-weight: 500;
   line-height: 51px;
   letter-spacing: 0em;
-  text-align: left;
   color: #ff6060;
 }
 .error__link {
-  width: 284px;
-  height: 26px;
-  margin: 182px 0 50px;
+  margin: 0px 50px 50px;
+  text-align: center;
   font-weight: 500;
   font-size: 1.25rem;
   color: #ff6060;
@@ -615,6 +588,18 @@ select {
 .error__link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 930px) {
+  .error__code {
+    font-size: 9.3rem;
+  }
+  .error__txt {
+    font-size: 1.12rem;
+  }
+  .error__link {
+    font-size: 0.875rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
