@@ -84,7 +84,12 @@
         align-items: center;
         order: 2;
         & p {
-          padding-left: 20px;
+          font-size: 12px;
+          padding-left: 30px;
+        }
+        &__img {
+          height: 34px;
+          width: 34px;
         }
       }
     }

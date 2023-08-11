@@ -97,8 +97,8 @@
         font-size: 13px;
       }
       & svg {
-        width: 18.5px;
-        height: 18.5px;
+        width: 15px;
+        height: 15px;
       }
     }
   }
@@ -109,6 +109,10 @@
     &__button {
       padding-top: 4px;
       min-width: 21rem;
+      & svg {
+        width: 15px;
+        height: 15px;
+      }
     }
     &__content {
       font-size: 12px;
