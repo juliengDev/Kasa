@@ -11,6 +11,7 @@ const Logement = () => {
   const [logement, setLogement] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  // Get the id param from the URL.
   const { id } = useParams();
   const naviguate = useNavigate();
 

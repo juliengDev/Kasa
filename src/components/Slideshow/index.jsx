@@ -2,7 +2,6 @@
 import { useState } from "react";
 
 const Slideshow = ({ pictures }) => {
-  // const [currentPicture, setCurrentPicture] = useState(pictures[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const previousImage = () => {
