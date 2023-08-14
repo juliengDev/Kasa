@@ -109,13 +109,11 @@ select {
 }
 
 .banner-about {
-  position: relative;
   min-height: 223px;
 }
 .banner-about img {
-  position: absolute;
-  object-fit: cover;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 908px) {
@@ -133,6 +131,10 @@ select {
   .banner {
     margin: 0 5px 40px;
     max-height: 111px;
+  }
+  .banner img {
+    max-width: 100%;
+    height: auto;
   }
   .banner__title {
     font-size: 1.5rem;
@@ -166,11 +168,11 @@ select {
   z-index: 1;
 }
 .dropdown__button__label {
-  margin-left: 1.125rem;
+  margin-left: 0.5rem;
   font-size: 1.875rem;
 }
 .dropdown__button svg {
-  margin-right: 30px;
+  margin-right: 15px;
   color: #fff;
   transition: transform 400ms ease-in-out;
 }
@@ -612,7 +614,7 @@ select {
 
 @media only screen and (max-width: 930px) {
   .error__code {
-    font-size: 9.3rem;
+    font-size: 7.3rem;
   }
   .error__txt {
     font-size: 1.12rem;

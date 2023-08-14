@@ -28,12 +28,10 @@
 }
 
 .banner-about {
-  position: relative;
   min-height: 223px;
   & img {
-    position: absolute;
-    object-fit: cover;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -53,6 +51,10 @@
   .banner {
     margin: 0 5px 40px;
     max-height: 111px;
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
   }
   .banner__title {
     font-size: 1.5rem;
